@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+/* centrer le bloc à bordure blanche */
+.container{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    /* border: 1px solid white; */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.logo{
+    position: absolute;
+    background-color: #b20510;
+    height: 230px;
+    width: 55px;
+    left: 80px;
+    top: 60px;
+}
+
+/* pr dupliquer la barre vertical à droite */
+.logo:before{
+    content: "";
+    position: absolute;
+    background-color: #b20510;
+    height: 230px;
+    width: 55px;
+    left: 130px;
+}
+
+/* pr afficher la barre au milieu en diagonale */ 
+.logo:after{
+    content: "";
+    position: absolute;
+    background-color: #e30913;
+    height: 300px;
+    width: 55px;
+    transform: rotate(-28deg);
+    left: 62px;
+    bottom: -31px;
+}
+
+.boxes{
+    background-color: #000000;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+}
+
+/* pr arrondir le logo en bas */
+.boxes:before{
+    position: absolute;
+    content: "";
+    background-color: #000000;
+    height: 40px;
+    width: 220px;
+    bottom: -260px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 50%; 
+}
